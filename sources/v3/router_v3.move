@@ -135,6 +135,21 @@ module dex_contract::router_v3 {
         abort(0);
     }
 
+    // return (amount_a_in, amount_b_in, fa_a_remain, fa_b_remain)
+    public fun add_liquidity_by_contract(
+        lp: &signer,
+        lp_object: Object<position_v3::Info>,
+        amount_a_desired: u64,
+        amount_b_desired: u64,
+        amount_a_min: u64,
+        amount_b_min: u64,
+        fa_a: FungibleAsset,
+        fa_b: FungibleAsset,
+        _deadline: u64
+    ): (u64, u64, FungibleAsset, FungibleAsset) {
+        abort(0);
+    }
+
     public entry fun add_liquidity_coin<CoinType>(
         _lp: &signer,
         _lp_object: Object<position_v3::Info>,
@@ -183,6 +198,18 @@ module dex_contract::router_v3 {
         _recipient: address,
         _deadline: u64
     ) {
+        abort(0);
+    }
+
+    // return (option<fa_a>, option<fa_b>)
+    public fun remove_liquidity_by_contract(
+        lp: &signer,
+        lp_object: Object<position_v3::Info>,
+        liquidity_delta: u128,
+        amount_a_min: u64,
+        amount_b_min: u64,
+        _deadline: u64
+    ): (Option<FungibleAsset>, Option<FungibleAsset>) {
         abort(0);
     }
 
