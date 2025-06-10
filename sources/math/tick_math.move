@@ -6,5 +6,13 @@ module dex_contract::tick_math {
     ): I32 {
         i32::zero()
     }
+
+     public fun max_sqrt_price() : u128 {
+        abort(0)
+    }
+
+    public fun min_sqrt_price() : u128 {
+        abort(0)
+    }
 }
 
