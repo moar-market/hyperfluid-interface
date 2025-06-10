@@ -1,7 +1,8 @@
 module dex_contract::router_v3 {
 
     use aptos_framework::object::{Object};
-    use aptos_framework::fungible_asset::{Metadata};
+    use aptos_framework::fungible_asset::{Metadata, FungibleAsset};
+    use std::option::{Option};
     use dex_contract::position_v3;
 
     const EAMOUNT_A_TOO_LESS: u64 = 200001;
@@ -147,7 +148,7 @@ module dex_contract::router_v3 {
         fa_b: FungibleAsset,
         _deadline: u64
     ): (u64, u64, FungibleAsset, FungibleAsset) {
-        abort(0);
+        abort(0)
     }
 
     public entry fun add_liquidity_coin<CoinType>(
@@ -210,7 +211,7 @@ module dex_contract::router_v3 {
         amount_b_min: u64,
         _deadline: u64
     ): (Option<FungibleAsset>, Option<FungibleAsset>) {
-        abort(0);
+        abort(0)
     }
 
     public entry fun remove_liquidity_both_coins<CoinType1, CoinType2>(
