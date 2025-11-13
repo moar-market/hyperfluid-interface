@@ -1,5 +1,5 @@
 module dex_contract::fridge {
-    public entry fun claim_box_by_id(_user: &signer, _box_id: address) {
+    entry fun claim_box_by_id(_user: &signer, _box_id: address) {
         abort(0);
     }
 }
